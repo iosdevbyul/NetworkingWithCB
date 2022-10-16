@@ -11,6 +11,13 @@
 		78FECD0028FB1731005562C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECCFF28FB1731005562C2 /* ContentView.swift */; };
 		78FECD0228FB1732005562C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD0128FB1732005562C2 /* Assets.xcassets */; };
 		78FECD0528FB1732005562C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78FECD0428FB1732005562C2 /* Preview Assets.xcassets */; };
+		78FECD0D28FB177A005562C2 /* ProfileImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD0C28FB177A005562C2 /* ProfileImgView.swift */; };
+		78FECD1028FB1865005562C2 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 78FECD0F28FB1865005562C2 /* URLImage */; };
+		78FECD1228FB1865005562C2 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 78FECD1128FB1865005562C2 /* URLImageStore */; };
+		78FECD1428FB1A5E005562C2 /* RandomUserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD1328FB1A5E005562C2 /* RandomUserRowView.swift */; };
+		78FECD1728FB1DEB005562C2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 78FECD1628FB1DEB005562C2 /* Alamofire */; };
+		78FECD1A28FB1F66005562C2 /* RandomUser+ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD1928FB1F66005562C2 /* RandomUser+ResponseData.swift */; };
+		78FECD1C28FB2248005562C2 /* RandomUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FECD1B28FB2248005562C2 /* RandomUserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,10 @@
 		78FECCFF28FB1731005562C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78FECD0128FB1732005562C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78FECD0428FB1732005562C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		78FECD0C28FB177A005562C2 /* ProfileImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImgView.swift; sourceTree = "<group>"; };
+		78FECD1328FB1A5E005562C2 /* RandomUserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserRowView.swift; sourceTree = "<group>"; };
+		78FECD1928FB1F66005562C2 /* RandomUser+ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RandomUser+ResponseData.swift"; sourceTree = "<group>"; };
+		78FECD1B28FB2248005562C2 /* RandomUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78FECD1728FB1DEB005562C2 /* Alamofire in Frameworks */,
+				78FECD1228FB1865005562C2 /* URLImageStore in Frameworks */,
+				78FECD1028FB1865005562C2 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +65,8 @@
 		78FECCFC28FB1731005562C2 /* NetworkingWithCB */ = {
 			isa = PBXGroup;
 			children = (
+				78FECD1828FB1F46005562C2 /* Data */,
+				78FECD0B28FB175B005562C2 /* UI */,
 				78FECCFD28FB1731005562C2 /* NetworkingWithCBApp.swift */,
 				78FECCFF28FB1731005562C2 /* ContentView.swift */,
 				78FECD0128FB1732005562C2 /* Assets.xcassets */,
@@ -65,6 +81,24 @@
 				78FECD0428FB1732005562C2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		78FECD0B28FB175B005562C2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD0C28FB177A005562C2 /* ProfileImgView.swift */,
+				78FECD1328FB1A5E005562C2 /* RandomUserRowView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		78FECD1828FB1F46005562C2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				78FECD1928FB1F66005562C2 /* RandomUser+ResponseData.swift */,
+				78FECD1B28FB2248005562C2 /* RandomUserViewModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +117,11 @@
 			dependencies = (
 			);
 			name = NetworkingWithCB;
+			packageProductDependencies = (
+				78FECD0F28FB1865005562C2 /* URLImage */,
+				78FECD1128FB1865005562C2 /* URLImageStore */,
+				78FECD1628FB1DEB005562C2 /* Alamofire */,
+			);
 			productName = NetworkingWithCB;
 			productReference = 78FECCFA28FB1731005562C2 /* NetworkingWithCB.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +150,10 @@
 				Base,
 			);
 			mainGroup = 78FECCF128FB1731005562C2;
+			packageReferences = (
+				78FECD0E28FB1865005562C2 /* XCRemoteSwiftPackageReference "url-image" */,
+				78FECD1528FB1DEB005562C2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 78FECCFB28FB1731005562C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				78FECD0028FB1731005562C2 /* ContentView.swift in Sources */,
+				78FECD1428FB1A5E005562C2 /* RandomUserRowView.swift in Sources */,
+				78FECD1A28FB1F66005562C2 /* RandomUser+ResponseData.swift in Sources */,
+				78FECD0D28FB177A005562C2 /* ProfileImgView.swift in Sources */,
+				78FECD1C28FB2248005562C2 /* RandomUserViewModel.swift in Sources */,
 				78FECCFE28FB1731005562C2 /* NetworkingWithCBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +384,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78FECD0E28FB1865005562C2 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		78FECD1528FB1DEB005562C2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78FECD0F28FB1865005562C2 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78FECD0E28FB1865005562C2 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		78FECD1128FB1865005562C2 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78FECD0E28FB1865005562C2 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		78FECD1628FB1DEB005562C2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78FECD1528FB1DEB005562C2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78FECCF228FB1731005562C2 /* Project object */;
 }
