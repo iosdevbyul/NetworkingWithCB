@@ -9,12 +9,19 @@ import Foundation
 import SwiftUI
 
 struct RandomUserRowView: View {
+    
+    var randomUser: RandomUser
+    
+    init(_ randomUser: RandomUser) {
+        self.randomUser = randomUser
+    }
+    
     var body: some View {
         HStack {
-            ProfileImgView(imageUrl: URL(string: "https://randomuser.me/api/portraits/women/55.jpg")!)
+            ProfileImgView(imageUrl: randomUser.profileImgUrl)
             
             
-            Text("abc")
+            Text("\(randomUser.description)")
                 .fontWeight(.heavy)
                 .font(.system(size: 25))
                 .lineLimit(2)
@@ -26,6 +33,6 @@ struct RandomUserRowView: View {
 
 struct RandomUserRowView_Previews: PreviewProvider {
     static var previews: some View {
-        RandomUserRowView()
+        RandomUserRowView(RandomUser.getDummy())
     }
 }

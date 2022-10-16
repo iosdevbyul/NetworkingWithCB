@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var randomUserViewModel = RandomUserViewModel()
+    
     var body: some View {
-        List(0...100, id: \.self){ index in
-            RandomUserRowView()
+        
+        List(randomUserViewModel.randomUsers){ aRandomUser in
+            RandomUserRowView(aRandomUser)
         }
     }
 }
